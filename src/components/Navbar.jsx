@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 
 import { FaBars, FaGithub, FaLinkedin, FaTimes } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+// import { BsFillPersonLinesFill } from "react-icons/bs";
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
@@ -15,9 +15,9 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
+    <div className="fixed z-50 w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
       <div>
-        <img src={logo} alt="Logo Image" style={{ width: "50px" }} />
+        <img src={logo} alt="Logo" style={{ width: "50px" }} />
       </div>
 
       {/* menu */}
@@ -120,25 +120,37 @@ const Navbar = () => {
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
         <ul>
           <li className="w-[150px] h-[40px] flex justify-between items-center rounded-r-full ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
-            <a className="flex justify-between items-center w-full text-gray-300">
+            <a
+              href="www.linkedin.com/in/mohamed-samahi"
+              target="_blank"
+              className="flex justify-between items-center w-full text-gray-300"
+            >
               Linkedin <FaLinkedin size={25} />
             </a>
           </li>
           <li className="w-[150px] h-[40px] flex justify-between items-center rounded-r-full ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]">
-            <a className="flex justify-between items-center w-full text-gray-300">
+            <a
+              href="https://github.com/Mohamed-Samahi"
+              target="_blank"
+              rel="noreferrer"
+              className="flex justify-between items-center w-full text-gray-300"
+            >
               Github <FaGithub size={25} />
             </a>
           </li>
           <li className="w-[150px] h-[40px] flex justify-between items-center rounded-r-full ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]">
-            <a className="flex justify-between items-center w-full text-gray-300">
+            <a
+              href="mailto:mohamedsamahi2002@gmail.com"
+              className="flex justify-between items-center w-full text-gray-300"
+            >
               Email <HiOutlineMail size={25} />
             </a>
           </li>
-          <li className="w-[150px] h-[40px] flex justify-between items-center rounded-r-full ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]">
+          {/* <li className="w-[150px] h-[40px] flex justify-between items-center rounded-r-full ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]">
             <a className="flex justify-between items-center w-full text-gray-300">
               Resume <BsFillPersonLinesFill size={25} />
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>
